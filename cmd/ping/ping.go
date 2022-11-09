@@ -31,7 +31,9 @@ func main() {
 		// https://www.infraexpert.com/study/tcpip4.html
 		Type: []byte{0x08}, // icmp echo request -> 0x08
 		Code: []byte{0x00}, // echo request の 要求 -> 0x00
-
+		CheckSum: []byte{0x00, 0x00}, // とりあえず空を入れておく
+		Identification: []byte{0x00}, // とりあえず適当でいいみたい https://akrad.hatenablog.com/entry/2018/11/25/223335
+		SequenceNumber: 
 	}
 
 	// add ip header
