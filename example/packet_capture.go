@@ -16,6 +16,7 @@ var (
 )
 
 func main() {
+	// https://mrtc0.hateblo.jp/entry/2016/03/19/232252
 	// network interface を指定できる？
 	log.SetFlags(log.Llongfile)
 	//log.setFlags(log.Llongfile)
@@ -23,6 +24,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	// ipv4, ipv6, tcp, udp は区別できる？
 	packetSource := gopacket.NewPacketSource(handle, handle.LinkType())
 
